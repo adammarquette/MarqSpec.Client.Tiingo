@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="MarqSpec.Client.Tiingo.Tests/MarqSpec.Client.Tiingo.Tests.csproj" />
+  <Project Path="MarqSpec.Client.Tiingo/MarqSpec.Client.Tiingo.csproj" />
+</Solution>

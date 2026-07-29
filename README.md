@@ -2,8 +2,9 @@
 
 A .NET client library for the **Tiingo news REST API** — a **data-only** news source.
 
-> **Status: scaffolding.** No implementation yet — this repo currently holds the requirements only. Start at
-> [`PRD.md`](PRD.md); the layout below is the plan, not the present.
+> **Status: the news client has shipped** (gh#440). `TiingoNewsClient.GetNewsAsync` fetches news over REST,
+> filtered from a start date, with its own test suite. Price endpoints are deliberately not built — price data
+> stays single-source (Finnhub).
 
 ## What this is
 

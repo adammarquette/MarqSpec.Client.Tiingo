@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+
+    <PackageId>MarqSpec.Client.Tiingo</PackageId>
+    <Version>0.1.0</Version>
+    <Authors>Adam Marquette</Authors>
+    <Company>MarqSpec</Company>
+    <Description>A .NET client library for the Tiingo news REST API — a data-only news source.</Description>
+    <PackageTags>Tiingo;News;API;Client;MarketData</PackageTags>
+    <RepositoryUrl>https://github.com/adammarquette/MarqSpec.Client.Tiingo</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageProjectUrl>https://github.com/adammarquette/MarqSpec.Client.Tiingo</PackageProjectUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+
+</Project>
