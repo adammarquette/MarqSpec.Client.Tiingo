@@ -363,16 +363,11 @@ MigrationBackup/
 FodyWeavers.xsd
 
 # =============================================================================
-# Secrets (R-9.3)
+# Secrets (R-5)
 # =============================================================================
-# This is a PUBLIC repository, and its history already contains a rotated real
-# credential (85cb240). Runtime app configuration is exactly the file a developer
-# pastes a key into, so none of it is tracked — only the *.example.json templates
-# are. #17 untracked two of these by path; this generalises the rule so a new
-# project cannot reintroduce the problem by being new.
-#
-# Prefer `dotnet user-secrets` over a local file entirely — every project that
-# reads credentials declares a UserSecretsId.
+# This is a public repository. Runtime app configuration is exactly the file a
+# developer pastes a key into, so none of it is tracked — only the *.example.json
+# templates are. Prefer `dotnet user-secrets` over a local file entirely.
 **/appsettings.json
 **/appsettings.*.json
 !**/appsettings.example.json
