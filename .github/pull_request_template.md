@@ -1,9 +1,10 @@
 <!--
   Open against `develop`. Populate every field — assignee, milestone, one work:* label, a Work Estimate label.
-  Reference the issue with a PLAIN `Closes #N` below; a backticked keyword does not bind and will not auto-close.
+  A Tiingo PR cannot close a trading-copilot issue. Use a fully-qualified
+  `Related to adammarquette/trading-copilot#N`. A local issue uses a PLAIN `Closes #N`.
 -->
 
-Closes #
+Related to adammarquette/trading-copilot#
 
 ## What changed and why
 
@@ -14,27 +15,26 @@ Closes #
 <!-- What you ran, and what it proved. "Tests pass" is not a verification; say which tests and what they cover. -->
 
 - [ ] `dotnet format --verify-no-changes` clean
-- [ ] `dotnet build -c Release` clean on **both** target frameworks, warnings-as-errors on
+- [ ] `dotnet build -c Release` clean, warnings-as-errors on
 - [ ] Unit tests green
-- [ ] Integration tests green against the fake gateway (no credentials required)
+- [ ] Integration tests green against the loopback listener (no credentials required)
 
 ## Checklist
 
 - [ ] **Test-first** — the new test failed before the implementation; a bug fix reproduces the bug first
-- [ ] **Docs in lockstep** — the affected section of the PRD (`R-#`), architecture doc, ADR, or the library
-      README that ships in the package is updated *in this PR*
+- [ ] **Docs in lockstep** — the affected section of the PRD (`R-#`), architecture doc, ADR, or README is
+      updated *in this PR*
 - [ ] **No secrets** — nothing logged, nothing tracked, no credential-shaped value in a committed file
 - [ ] **Commits** are Conventional and carry both `Assisted-by:` and `Co-Authored-By:` trailers if AI-authored
 - [ ] History is curated into units of work (this repo rebase-merges; squash is disabled)
 
-## Order-path questions — answer if this touches transport, resilience, or orders
+## Token / error questions — answer if this touches auth, transport, or errors
 
 <!-- Delete this section if it genuinely does not apply. If you are unsure whether it applies, it applies. -->
 
-- [ ] Nothing non-idempotent became retryable. `POST /api/Order/place` is still excluded.
-- [ ] A timeout or cancellation is treated as an **unknown** outcome, not a failure — no path reports
-      "not placed" for a request that may be live.
-- [ ] New wire enum values are handled exhaustively; no zero-value default is permissive.
+- [ ] The API token still travels as `Authorization: Token`, never a query-string parameter.
+- [ ] A timeout or cancellation is treated as an **unknown** outcome, not a failure.
+- [ ] Provider errors (including HTTP 429) still surface; nothing swallows them into empty news.
 
 ## Public surface
 
