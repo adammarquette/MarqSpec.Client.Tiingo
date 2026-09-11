@@ -26,7 +26,7 @@ public interface ITiingoNewsClient
 /// </remarks>
 public sealed class TiingoNewsClient : ITiingoNewsClient
 {
-    private static readonly JsonSerializerOptions JsonOptions = new(JsonSerializerDefaults.Web);
+    private static readonly JsonSerializerOptions _jsonOptions = new(JsonSerializerDefaults.Web);
 
     private readonly HttpClient _httpClient;
     private readonly TiingoOptions _options;
@@ -62,7 +62,7 @@ public sealed class TiingoNewsClient : ITiingoNewsClient
         response.EnsureSuccessStatusCode();
 
         IReadOnlyList<TiingoNewsArticle>? articles =
-            await response.Content.ReadFromJsonAsync<IReadOnlyList<TiingoNewsArticle>>(JsonOptions, cancellationToken);
+            await response.Content.ReadFromJsonAsync<IReadOnlyList<TiingoNewsArticle>>(_jsonOptions, cancellationToken);
 
         return articles ?? [];
     }
