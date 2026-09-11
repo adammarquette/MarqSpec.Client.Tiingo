@@ -1,0 +1,17 @@
+MarqSpec.Client.Tiingo
+Copyright (c) 2026 Adam Marquette
+
+Licensed under the MIT License. See the LICENSE file for the full text.
+
+This is an AI-first engineering project. The great majority of the source, tests,
+and documentation was authored by AI coding agents working under human direction,
+review, and acceptance; comparatively little was hand-written.
+
+NO WARRANTY. This library is a transport client for a published news API.
+It is provided on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND.
+Nothing in this project is financial advice. Anyone running it is solely
+responsible for their own trading decisions, outcomes, and losses.
+
+This project is not affiliated with, endorsed by, or sponsored by Tiingo or
+any of its operators. API names and endpoints appear only as necessary to
+interoperate with a published interface.
