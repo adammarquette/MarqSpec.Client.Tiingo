@@ -18,10 +18,10 @@ The Coding and QA contracts are **subtree**-scoped: the work they govern is iden
 edited, so directory proximity delivers them exactly when needed and costs nothing otherwise.
 
 The Reviewer, Platform and Coordinator contracts are **role**-scoped: they follow *what you are doing*, not
-where a file sits. Reviewing happens across the whole diff; platform work touches the workflows, the compose
-files, the `FakeGateway` Dockerfile and the release path; coordinating reads the board and launches other
-sessions — artifacts and acts scattered across the tree. Putting any of them where it would auto-load would load
-it for everyone who happens to touch the directory, which is how a contract becomes noise.
+where a file sits. Reviewing happens across the whole diff; platform work touches the workflows, packaging
+and the release path; coordinating reads the board and launches other sessions — artifacts and acts scattered
+across the tree. Putting any of them where it would auto-load would load it for everyone who happens to touch
+the directory, which is how a contract becomes noise.
 
 **The cost of that design is that they will not arrive on their own.** Wearing one of those hats without opening
 its contract is the most common way agents get this repo wrong, which is why the routing table at the top of
